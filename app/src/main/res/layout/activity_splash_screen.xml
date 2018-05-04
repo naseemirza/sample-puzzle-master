@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.davenotdavid.samplepuzzle.SplashScreen">
+
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="210dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="170dp"
+        android:background="@drawable/image_border"
+        android:padding="7dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/myname" />
+
+    <ProgressBar
+        android:id="@+id/splash_screen_progress_bar"
+        style="@android:style/Widget.DeviceDefault.ProgressBar.Horizontal"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/img"
+        android:layout_marginRight="5dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="150dp" />
+
+
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/t1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:layout_marginStart="250dp"
+        android:layout_marginTop="480dp"
+        android:text="Creadit To:" />
+
+    <TextView
+        android:id="@+id/t2"
+        android:layout_below="@+id/t1"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="240dp"
+        android:layout_height="wrap_content"
+        android:text="Naseem Mirza" />
+
+    <TextView
+        android:id="@+id/t3"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/t2"
+        android:layout_marginStart="240dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+91 9034100630" />
+
+
+
+</RelativeLayout>

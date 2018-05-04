@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.davenotdavid.samplepuzzle.InstructionActivity">
+
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="280dp"
+        android:layout_height="270dp"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp"
+        android:background="@drawable/image_border"
+        android:padding="7dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/directions" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:textSize="30dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/img"
+        android:layout_marginTop="50dp"
+        android:text="For Solve this Puzzle" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20dp"
+        android:layout_marginTop="30dp"
+        android:text="You can move only" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Left , Right , Up and Down !" />
+
+    <Button
+        android:id="@+id/button_play"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:textColor="#ffff"
+        android:layout_below="@+id/img"
+        android:textSize="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/custom_button_round_rect2_border"
+        android:layout_centerHorizontal="true"
+        android:text="Play" />
+
+
+</RelativeLayout>

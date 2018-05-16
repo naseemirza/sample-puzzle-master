@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".InfoActivity" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".InstructionActivity"></activity>
+        <activity android:name=".InstructionActivity" />
+        <activity android:name=".AlertDialogActivity"></activity>
     </application>
 
 </manifest>

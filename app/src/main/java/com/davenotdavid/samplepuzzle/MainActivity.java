@@ -1,6 +1,9 @@
 package com.davenotdavid.samplepuzzle;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.ViewTreeObserver;
@@ -131,7 +134,10 @@ public class MainActivity extends AppCompatActivity {
         tileList[currentPosition] = newPosition;
         display(context);
 
+
+
         if (isSolved()) Toast.makeText(context, "Brave", Toast.LENGTH_SHORT).show();
+
     }
 
     public static void moveTiles(Context context, String direction, int position) {
@@ -212,5 +218,32 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return solved;
+
     }
-}
+
+    @Override
+    public void onBackPressed() {
+        //super.onBackPressed();
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(false);
+        builder.setMessage("Do you want to Exit?");
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //if user pressed "yes", then he is allowed to exit from application
+                finish();
+            }
+        });
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //if user select "No", just cancel this dialog and continue with app
+                dialog.cancel();
+                startActivity(new Intent(MainActivity.this,MainActivity.class));
+            }
+        });
+        AlertDialog alert = builder.create();
+        alert.show();
+    }
+    }
+
